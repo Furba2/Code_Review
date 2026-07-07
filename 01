@@ -1,0 +1,75 @@
+psycopg2 
+• python library
+• let python talk to PostgreSQL database
+• translator between python code and database
+
+.
+• use something that belong to psycopg2
+• dog.bark( )
+• psycopg2.connect( )
+
+connect
+• function provided by psycopg2 library
+• open connection to postgreSQL database
+
+DATABASE_URL
+• is a variable
+• contain info to find and login database
+
+{
+ psycopg2.connect(DATABASE_URL)
+}
+= use psycopg2 library to connect postgres db whose details are stored in DATABASE_URL
+
+{
+class ChatRequest(BaseModel):
+  message: str
+  site: str
+}
+
+BaseModel
+• ChatRequest based on BaseModel
+• check if data has correct type
+• convert data when possible
+• report error if required fields are missing
+• without base model you have to write them yourself
+
+with
+• open and close automatically
+• without this you have to exit every time 
+
+cursor 
+• tool for taking to db
+• send SQL command
+• get result
+
+cur
+• conn = phone connection
+• cur = person speaking on phone
+
+execute( )
+• run this SQL command
+• triple " " " because it spans multiple lines
+
+table_name 
+• column we want
+• FROM = Look inside
+
+information_schema.tables
+• table storing info about db
+• contain table names, schemas, table types
+
+# tables = [ row[ 0 ] for row in cur.fetchall( ) ]
+• every row returned by fetchall( ), take first item row [ 0 ] and put it in new list.
+
+
+
+
+
+
+
+    
+
+
+
+
